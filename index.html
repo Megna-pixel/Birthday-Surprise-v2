@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Panda 🐼</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Galaxy Background -->
+
+    <div class="galaxy"></div>
+
+    <div class="floating-hearts" id="hearts"></div>
+
+    <div id="flash"></div>
+
+    <div id="fog">
+
+        <div class="smoke smoke1"></div>
+
+        <div class="smoke smoke2"></div>
+
+        <div class="smoke smoke3"></div>
+
+    </div>
+
+
+    <!-- ===================== -->
+    <!-- Gift Screen -->
+    <!-- ===================== -->
+
+    <section class="screen active" id="giftScreen">
+
+        <div class="gift-container">
+
+            <div class="gift-box" id="giftBox">
+                🎁
+            </div>
+
+            <h1 class="gift-title">
+                A Gift For Panda 🐼
+            </h1>
+
+            <p class="gift-subtitle">
+                Tap the gift to begin your birthday surprise 💜
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================== -->
+    <!-- Main Screen -->
+    <!-- ===================== -->
+
+    <section class="screen hidden" id="home">
+
+        <div class="balloons">
+
+            <span>🎈</span>
+            <span>🎈</span>
+            <span>🎈</span>
+            <span>🎈</span>
+            <span>🎈</span>
+
+        </div>
+
+        <div class="card">
+
+            <div class="date-badge">
+
+                ✨ 09 AUGUST 2026
+
+            </div>
+
+            <div class="logo">
+
+                <img src="images/panda.png" alt="Panda">
+
+            </div>
+
+            <h2>
+
+                To My Favourite
+
+            </h2>
+
+            <p class="tagline">
+
+                Every memory with you is my favourite chapter.
+
+                <br>
+
+                Today is all about celebrating you. 💜
+
+            </p>
+
+            <button id="surpriseBtn">
+
+                Continue →
+
+            </button>
+
+        </div>
+
+    </section>
+    <!-- ===================== -->
+    <!-- Birthday Screen -->
+    <!-- ===================== -->
+
+    <section class="screen hidden" id="birthday">
+
+        <div class="birthday-card">
+
+            <h2>🎉 Happy Birthday 🎉</h2>
+
+            <h1>Panda 🐼</h1>
+
+            <p class="message">
+
+                Wishing you endless happiness,
+
+                success, laughter,
+
+                beautiful memories,
+
+                and a life filled with smiles. 💜
+
+            </p>
+
+            <button id="letterBtn">
+
+                Open Letter 💌
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================== -->
+    <!-- Letter Screen -->
+    <!-- ===================== -->
+
+<section class="screen hidden" id="letterScreen">
+
+    <div class="letter-card">
+
+        <div class="letter-date">
+            09 AUGUST 2026
+        </div>
+
+        <h2>💌 Dear Panda</h2>
+
+        <p id="letterText"></p>
+
+        <button id="galleryBtn">
+            Continue →
+        </button>
+
+    </div>
+
+</section>
+
+
+    <!-- ===================== -->
+    <!-- Gallery Screen -->
+    <!-- ===================== -->
+
+    <section class="screen hidden" id="galleryScreen">
+
+        <h2>Beautiful Memories 📸</h2>
+
+        <div class="gallery">
+
+            <img src="images/photo1.jpg" alt="Memory 1">
+
+            <img src="images/photo2.jpg" alt="Memory 2">
+
+            <img src="images/photo3.jpg" alt="Memory 3">
+
+        </div>
+
+        <button id="cakeBtn">
+
+            Next 🎂
+
+        </button>
+
+    </section>
+
+
+    <!-- ===================== -->
+    <!-- Cake Screen -->
+    <!-- ===================== -->
+
+    <section class="screen hidden" id="cakeScreen">
+
+        <h2>🎂 Make A Wish</h2>
+
+        <div class="cake">
+
+            🎂
+
+        </div>
+
+        <button id="finalBtn">
+
+            Celebrate 🎆
+
+        </button>
+
+    </section>
+
+
+    <!-- ===================== -->
+    <!-- Final Screen -->
+    <!-- ===================== -->
+
+    <section class="screen hidden" id="finalScreen">
+
+        <div class="final-card">
+
+            <h1>❤️ Happy Birthday Panda ❤️</h1>
+
+            <p>
+
+                No matter where life takes us...
+
+                you'll always have a special place
+
+                in my heart.
+
+            </p>
+
+            <h2>Have an amazing year ahead! 💜</h2>
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
