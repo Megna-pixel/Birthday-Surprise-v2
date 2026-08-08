@@ -53,7 +53,7 @@ gift.onclick = function(){
             document.querySelector(".card").classList.add("show");
         });
 
-    }, 1200);
+    }, 1600);
 
 };
 
