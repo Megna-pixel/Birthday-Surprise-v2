@@ -12,42 +12,48 @@ gift.onclick = function(){
 
     gift.classList.add("opening");
 
-    document.getElementById("flash").classList.add("show");
+    // Flash
+    const flash = document.getElementById("flash");
 
-    setTimeout(()=>{
+    flash.classList.add("show");
 
-        document.getElementById("flash").classList.remove("show");
+    setTimeout(() => {
+        flash.classList.remove("show");
+    }, 350);
 
-    },350);
 
-    document.getElementById("fog").classList.add("show");
+    // Cinematic fog
+    const fog = document.getElementById("fog");
 
-    setTimeout(()=>{
+    fog.classList.add("show");
 
-        document.getElementById("fog").classList.remove("show");
+    setTimeout(() => {
+        fog.classList.remove("show");
+    }, 1800);
 
-    },2200);
 
+    // Heart explosion
     createHearts();
 
-    setTimeout(()=>{
+
+    // Reveal home screen
+    setTimeout(() => {
 
         giftScreen.classList.remove("active");
         giftScreen.classList.add("hidden");
+
         giftScreen.style.display = "none";
 
-       home.style.display = "flex";
-      home.classList.remove("hidden");
+        home.style.display = "flex";
+        home.classList.remove("hidden");
 
-    setTimeout(()=>{
+        requestAnimationFrame(() => {
+            home.classList.add("active");
 
-      home.classList.add("active");
+            document.querySelector(".card").classList.add("show");
+        });
 
-    },60);
-
-       document.querySelector(".card").classList.add("show");
-
-    },900);
+    }, 1200);
 
 };
 
@@ -91,7 +97,7 @@ function createHearts(){
         container.appendChild(heart);
 
         const angle = Math.random() * Math.PI * 2;
-const distance = 220 + Math.random() * 220;
+const distance = Math.min(window.innerWidth, window.innerHeight) * (0.25 + Math.random() * 0.25);
 
 const x = Math.cos(angle) * distance;
 const y = Math.sin(angle) * distance;
