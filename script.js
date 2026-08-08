@@ -90,51 +90,29 @@ function createHearts(){
 
         container.appendChild(heart);
 
-        const angle=Math.random()*Math.PI*2;
+        const angle = Math.random() * Math.PI * 2;
+const distance = 220 + Math.random() * 220;
 
-        const distance=220+Math.random()*220;
+const x = Math.cos(angle) * distance;
+const y = Math.sin(angle) * distance;
 
-        heart.animate(
-
-        [
-
-        {
-
-        transform:"translate(0,0) scale(.5)",
-
-        opacity:1
-
-        },
-
-        {
-
-        transform:`translate(${Math.cos(angle)*distance}px,
-        ${Math.sin(angle)*distance}px)
-        scale(1.2)`,
-
-        opacity:0
-
-        }
-
-        ],
-
-        {
-
-        duration:1400,
-
-        easing:"ease-out",
-
-        fill:"forwards"
-
-        }
-
-        );
-
-        setTimeout(()=>{
-
-            heart.remove();
-
-        },1800);
+heart.animate(
+[
+{
+    transform: "translate(0,0) scale(.5)",
+    opacity: 1
+},
+{
+    transform: `translate(${x}px, ${y}px) scale(1.2)`,
+    opacity: 0
+}
+],
+{
+    duration: 1400,
+    easing: "ease-out",
+    fill: "forwards"
+}
+);
 
     }
 
