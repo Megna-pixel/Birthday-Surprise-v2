@@ -393,21 +393,19 @@ box-shadow:0 18px 40px rgba(168,85,247,.55);
 }
 
 #hearts{
-
-position:fixed;
-
-inset:0;
-
-pointer-events:none;
-
-z-index:999;
-
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:99999;
+    overflow:visible;
 }
 
 .heart{
     position:fixed;
     pointer-events:none;
-    z-index:9999;
+    z-index:100000;
     will-change:transform, opacity;
 }
 
