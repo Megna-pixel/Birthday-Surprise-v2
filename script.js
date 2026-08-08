@@ -72,37 +72,42 @@ surpriseBtn.onclick=function(){
    },60);
 
 };
+
 function createHearts(){
 
     const container = document.getElementById("hearts");
 
-    for(let i = 0; i < 45; i++){
+    container.innerHTML = "";
+
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+
+    for(let i = 0; i < 50; i++){
 
         const heart = document.createElement("div");
 
         heart.className = "heart";
-        heart.innerHTML = Math.random() > 0.5 ? "💜" : "✨";
+        heart.innerHTML = Math.random() > 0.35 ? "💜" : "✨";
 
         const angle = Math.random() * Math.PI * 2;
-        const distance = 120 + Math.random() * 180;
+        const distance = 100 + Math.random() * 180;
 
         const x = Math.cos(angle) * distance;
         const y = Math.sin(angle) * distance;
 
-        heart.style.left = "50%";
-        heart.style.top = "50%";
+        heart.style.left = centerX + "px";
+        heart.style.top = centerY + "px";
 
         heart.style.setProperty("--x", x + "px");
         heart.style.setProperty("--y", y + "px");
 
         heart.style.fontSize =
-            (12 + Math.random() * 15) + "px";
+            (12 + Math.random() * 16) + "px";
+
+        heart.style.animationDelay =
+            (Math.random() * 0.12) + "s";
 
         container.appendChild(heart);
-
-        setTimeout(() => {
-            heart.remove();
-        }, 1600);
     }
 }
 
