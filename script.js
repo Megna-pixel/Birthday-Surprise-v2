@@ -73,56 +73,37 @@ surpriseBtn.onclick=function(){
 
 };
 
-
 function createHearts(){
 
-    const container=document.getElementById("hearts");
+    const container = document.getElementById("hearts");
 
-    const rect=gift.getBoundingClientRect();
+    for(let i = 0; i < 70; i++){
 
-    for(let i=0;i<100;i++){
+        const heart = document.createElement("div");
 
-        const heart=document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "💜";
 
-        heart.className="heart";
+        const angle = Math.random() * Math.PI * 2;
+        const distance = 100 + Math.random() * 180;
 
-        heart.innerHTML="💜";
+        heart.style.left = "50%";
+        heart.style.top = "50%";
 
-        heart.style.left=(rect.left+rect.width/2)+"px";
+        heart.style.setProperty("--x", `${Math.cos(angle) * distance}px`);
+        heart.style.setProperty("--y", `${Math.sin(angle) * distance}px`);
 
-        heart.style.top=(rect.top+rect.height/2)+"px";
-
-        heart.style.fontSize=(10+Math.random()*18)+"px";
+        heart.style.fontSize = `${12 + Math.random() * 16}px`;
+        heart.style.animationDelay = `${Math.random() * 0.15}s`;
 
         container.appendChild(heart);
 
-        const angle = Math.random() * Math.PI * 2;
-const distance = Math.min(window.innerWidth, window.innerHeight) * (0.25 + Math.random() * 0.25);
-
-const x = Math.cos(angle) * distance;
-const y = Math.sin(angle) * distance;
-
-heart.animate(
-[
-{
-    transform: "translate(0,0) scale(.5)",
-    opacity: 1
-},
-{
-    transform: `translate(${x}px, ${y}px) scale(1.2)`,
-    opacity: 0
-}
-],
-{
-    duration: 1400,
-    easing: "ease-out",
-    fill: "forwards"
-}
-);
-
+        setTimeout(() => {
+            heart.remove();
+        }, 1800);
     }
-
 }
+
 const letterBtn = document.getElementById("letterBtn");
 const galleryBtn = document.getElementById("galleryBtn");
 const cakeBtn = document.getElementById("cakeBtn");
